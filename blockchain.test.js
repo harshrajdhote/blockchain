@@ -7,7 +7,7 @@ describe('Blockchain',()=>{
         //persist with the each new test
         bc2 = new Blockchain();
     });
-    it('starts with genis block',()=>{
+    it('starts with genesis block',()=>{
         expect(bc.chain[0]).toEqual(Block.genesis()); //expect takes the value that we wanna check
     })
     //it creates a test
@@ -27,5 +27,15 @@ describe('Blockchain',()=>{
         bc2.chain[0].data = 'Bad data';
         expect(bc.isValidChain(bc2.chain)).toBe(false);
 
+    })
+    it("replcaes chain woith the valid chain",()=>{
+        bc2.addBlock('goo');
+        bc.replaceChain(bc2.chain);
+        expect(bc.chain).toEqual(bc2.chain);
+    })
+    it("does not replace the chian with one of lessthan or equal to length",()=>{
+        bc.addBlock("foo");
+        bc.replaceChain(bc2.chain);
+        expect(bc.chain).not.toEqual(bc2.chain); // if both are not equal than raise the error
     })
 });
