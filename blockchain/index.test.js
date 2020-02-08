@@ -1,4 +1,4 @@
-const Blockchain = require('./blockchain')
+const Blockchain = require('./index')
 const Block = require('./block')
 describe('Blockchain',()=>{
     let bc;
@@ -11,7 +11,7 @@ describe('Blockchain',()=>{
         expect(bc.chain[0]).toEqual(Block.genesis()); //expect takes the value that we wanna check
     })
     //it creates a test
-    it('adds a new block',()=>{
+    it('adds a new block',( )=>{
         const data = 'foo';
         bc.addBlock(data);
         expect(bc.chain[bc.chain.length-1].data).toEqual(data);
