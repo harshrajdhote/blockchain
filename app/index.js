@@ -13,6 +13,7 @@ app.get('/blocks',(req,res)=>{
 })
 app.get('/mine',(req,res)=>{
     const block = bc.addBlock(req.body.data);
+    p2pServer.syncChains();
     console.log(`New block added : ${block.toString()}`);
     res.redirect('/blocks');
 })
