@@ -1,0 +1,3 @@
+block chain articles
+51% attack https://blog.goodaudience.com/what-is-a-51-attack-or-double-spend-attack-aa108db63474
+how miners adds transactions to blockchain https://blog.goodaudience.com/how-a-miner-adds-transactions-to-the-blockchain-in-seven-steps-856053271476

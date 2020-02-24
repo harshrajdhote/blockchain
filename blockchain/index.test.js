@@ -17,22 +17,22 @@ describe('Blockchain',()=>{
         expect(bc.chain[bc.chain.length-1].data).toEqual(data);
 
     });
-    it('validates a valid chain',()=>{
+    it('validates a valid chain', () => {
         bc2.addBlock('foo');
-        console.log(bc2.chain);
-        console.log(bc.chain);
+    
         expect(bc.isValidChain(bc2.chain)).toBe(true);
-    });
+      });
     it('invalidates a chain with a corrupt genesis block',()=>{
         bc2.chain[0].data = 'Bad data';
         expect(bc.isValidChain(bc2.chain)).toBe(false);
 
     })
-    it("replcaes chain woith the valid chain",()=>{
+    it('replaces the chain with a valid chain', () => {
         bc2.addBlock('goo');
         bc.replaceChain(bc2.chain);
+    
         expect(bc.chain).toEqual(bc2.chain);
-    })
+      });
     it("does not replace the chian with one of lessthan or equal to length",()=>{
         bc.addBlock("foo");
         bc.replaceChain(bc2.chain);
