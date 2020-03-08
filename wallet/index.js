@@ -5,6 +5,7 @@ class Wallet{
         this.balance = INITIAL_BALANCE;
         this.keyPair = ChainUtil.genKeyPair();
         this.publicKey = this.keyPair.getPublic().encode('hex');
+        console.log(this.balance)
 
     }
     toString(){

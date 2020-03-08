@@ -6,4 +6,4 @@
 // console.log(fooblock.toString()); 
 const Wallet = require('./wallet/index')
 const wallet = new Wallet();
-console.log(wallet);
+console.log(wallet.toString());

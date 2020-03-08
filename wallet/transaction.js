@@ -3,7 +3,7 @@ class Transaction{
     constructor(){
         this.id = ChainUtil.id();
         this.input = null;
-        this.output = [];
+        this.outputs = [];
 
     }
     static newTransaction(senderWallet,recipient,amount){
@@ -12,7 +12,7 @@ class Transaction{
             console.log(`Amount: ${amount} exceeds balance.`);
             return;
         }
-        transaction.output.push(...[
+        transaction.outputs.push(...[
             {
                 amount: senderWallet.balance - amount,
                 address: senderWallet.publicKey
@@ -24,3 +24,4 @@ class Transaction{
         return transaction;
     }
 }
+module.exports = Transaction;
