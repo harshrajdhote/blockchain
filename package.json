@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest --WatchAll",
     "dev-test": "nodemon dev-test",
-    "start" : "node ./app",
-    "dev" : "nodemon ./app"
+    "start": "node ./app",
+    "dev": "nodemon ./app"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,9 @@
   "dependencies": {
     "crpyto-js": "0.0.1-security",
     "crypto-js": "^3.1.9-1",
+    "elliptic": "^6.5.2",
     "express": "^4.17.1",
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "uuid": "^7.0.2"
   }
 }

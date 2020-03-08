@@ -17,7 +17,6 @@ class Block{
         Hash      : ${this.hash.substring(0,10)}
 		Data      : ${this.data}
 		Nonce     : ${this.nonce}
-
 		`;
 	}
 	static genesis(){
